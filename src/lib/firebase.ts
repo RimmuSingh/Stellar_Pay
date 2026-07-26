@@ -122,7 +122,7 @@ export async function migrateLocalStorageToFirestore(walletAddress: string) {
   }
 
   // 3. Contracts migration
-  const contractsKey = "Steller_pay_mock_contracts";
+  const contractsKey = "Stellar_pay_mock_contracts";
   const contractsData = localStorage.getItem(contractsKey);
   if (contractsData) {
     try {
@@ -146,7 +146,7 @@ export async function migrateLocalStorageToFirestore(walletAddress: string) {
   }
 
   // 4. Jobs migration
-  const jobsKey = "Steller_pay_mock_jobs";
+  const jobsKey = "Stellar_pay_mock_jobs";
   const jobsData = localStorage.getItem(jobsKey);
   if (jobsData) {
     try {
@@ -170,7 +170,7 @@ export async function migrateLocalStorageToFirestore(walletAddress: string) {
   }
 
   // 5. Applications migration
-  const appsKey = "Steller_pay_mock_apps";
+  const appsKey = "Stellar_pay_mock_apps";
   const appsData = localStorage.getItem(appsKey);
   if (appsData) {
     try {
@@ -194,7 +194,7 @@ export async function migrateLocalStorageToFirestore(walletAddress: string) {
   }
 
   // 6. Swap Events migration
-  const swapsKey = "Steller_pay_mock_swap_events";
+  const swapsKey = "Stellar_pay_mock_swap_events";
   const swapsData = localStorage.getItem(swapsKey);
   if (swapsData) {
     try {
@@ -218,10 +218,10 @@ export async function migrateLocalStorageToFirestore(walletAddress: string) {
 
   // 7. Growth telemetry migration
   const telemetryKeys = [
-    { local: 'Steller_pay_mock_feedback_growth', col: 'growth_feedback' },
-    { local: 'Steller_pay_mock_invites', col: 'growth_invites' },
-    { local: 'Steller_pay_mock_tx_events', col: 'growth_tx_events' },
-    { local: 'Steller_pay_mock_onboarding_events', col: 'growth_onboarding_events' }
+    { local: 'Stellar_pay_mock_feedback_growth', col: 'growth_feedback' },
+    { local: 'Stellar_pay_mock_invites', col: 'growth_invites' },
+    { local: 'Stellar_pay_mock_tx_events', col: 'growth_tx_events' },
+    { local: 'Stellar_pay_mock_onboarding_events', col: 'growth_onboarding_events' }
   ];
 
   for (const { local, col } of telemetryKeys) {

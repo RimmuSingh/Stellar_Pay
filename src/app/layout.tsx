@@ -46,7 +46,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Steller_pay - Ship. Get Paid. No Trust Req.",
+  title: "Stellar_pay - Ship. Get Paid. No Trust Req.",
   description:
     "Decentralized escrow protocol for high-stakes freelance contracts. Built for architectural rigor and absolute payment certainty.",
   icons: {

@@ -15,7 +15,7 @@ export default function PrivacyPolicyPage() {
           <section>
             <p className="font-bold text-ink-primary mb-4">Last Updated: June 30, 2026</p>
             <p>
-              Your privacy is critically important to us. This Privacy Policy explains how Steller_pay collects, uses, and protects your information.
+              Your privacy is critically important to us. This Privacy Policy explains how Stellar_pay collects, uses, and protects your information.
             </p>
           </section>
 
@@ -31,7 +31,7 @@ export default function PrivacyPolicyPage() {
           <section className="border-t-2 border-dashed border-edge-neutral pt-8">
             <h2 className="text-2xl font-bold uppercase tracking-widest text-ink-primary mb-4">2. Blockchain Transparency</h2>
             <p>
-              Due to the public nature of the Stellar blockchain, any transactions you make (such as funding an escrow or receiving a payout) are public and permanent. This data is not controlled by Steller_pay.
+              Due to the public nature of the Stellar blockchain, any transactions you make (such as funding an escrow or receiving a payout) are public and permanent. This data is not controlled by Stellar_pay.
             </p>
           </section>
 

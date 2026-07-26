@@ -17,11 +17,11 @@ export default function Home() {
   const faqs = [
     {
       q: "How does the milestone escrow work?",
-      a: "Steller_pay escrows contract funds in a decentralized Stellar smart contract. The client locks the total budget. As milestones are submitted and verified, funds are automatically routed to the contractor's wallet."
+      a: "Stellar_pay escrows contract funds in a decentralized Stellar smart contract. The client locks the total budget. As milestones are submitted and verified, funds are automatically routed to the contractor's wallet."
     },
     {
       q: "Are there any hidden platform fees?",
-      a: "No. Steller_pay charges a flat 1.5% protocol fee upon successful contract settlement. We do not charge subscription fees or tax your active development hours."
+      a: "No. Stellar_pay charges a flat 1.5% protocol fee upon successful contract settlement. We do not charge subscription fees or tax your active development hours."
     },
     {
       q: "Is the contract code audited?",
@@ -41,7 +41,7 @@ export default function Home() {
         <div className="flex items-center gap-8">
           <Link href="/" className="font-semibold text-lg tracking-tight flex items-center gap-2">
             <span className="w-5 h-5 rounded-md bg-accent flex items-center justify-center text-white text-xs font-bold font-mono-data">T</span>
-            <span>Steller_pay</span>
+            <span>Stellar_pay</span>
           </Link>
           <div className="hidden md:flex items-center gap-6">
             <a href="#how-it-works" className="text-ink-secondary hover:text-ink-primary text-ui-label transition-colors">How it works</a>
@@ -164,7 +164,7 @@ export default function Home() {
           <div className="w-full md:w-[220px] border-r border-edge-neutral bg-bg-void/50 p-6 flex flex-col gap-6 shrink-0">
             <div className="flex items-center gap-2 px-2">
               <div className="w-6 h-6 rounded-md bg-accent flex items-center justify-center text-white text-[10px] font-bold font-mono-data">T</div>
-              <span className="font-semibold text-sm">Steller_pay</span>
+              <span className="font-semibold text-sm">Stellar_pay</span>
             </div>
             <div className="space-y-1.5 flex-1">
               {["Overview", "Jobs", "Contracts", "Payments", "Analytics", "Settings"].map((lbl, idx) => (
@@ -340,7 +340,7 @@ export default function Home() {
             </div>
             <pre className="font-mono-data text-xs text-accent-pressed leading-relaxed overflow-x-auto whitespace-pre pt-4">
               <code>{`// Initialize Contract & Lock Budget
-const escrow = new Steller_payContract({
+const escrow = new Stellar_payContract({
   contractAddress: "0x8f...39a1",
   clientWallet: "GBLX...92A1",
   freelancerWallet: "GA2F...4P9Q"
@@ -399,7 +399,7 @@ await escrow.deposit(USDC, 15000);`}</code>
                 <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-accent" /> Priority API support</li>
               </ul>
             </div>
-            <Link href="mailto:sales@Steller_pay.com" className="w-full neopop-button-teal py-3 text-xs font-medium">Contact Sales</Link>
+            <Link href="mailto:sales@Stellar_pay.com" className="w-full neopop-button-teal py-3 text-xs font-medium">Contact Sales</Link>
           </div>
         </div>
       </section>
@@ -443,12 +443,12 @@ await escrow.deposit(USDC, 15000);`}</code>
           <div className="md:col-span-6 space-y-4">
             <Link href="/" className="font-semibold text-base tracking-tight flex items-center gap-2 text-ink-primary">
               <span className="w-5 h-5 rounded-md bg-accent flex items-center justify-center text-white text-xs font-bold font-mono-data">T</span>
-              <span>Steller_pay</span>
+              <span>Stellar_pay</span>
             </Link>
             <p className="text-xs text-ink-secondary max-w-sm leading-relaxed">
               Decentralized infrastructure for secure milestone escrows. Built on the speed and reliability of Stellar.
             </p>
-            <p className="text-[10px] text-ink-tertiary font-mono-data">© 2026 Steller_pay PROTOCOL. ALL RIGHTS RESERVED.</p>
+            <p className="text-[10px] text-ink-tertiary font-mono-data">© 2026 Stellar_pay PROTOCOL. ALL RIGHTS RESERVED.</p>
           </div>
           <div className="md:col-span-6 flex justify-start md:justify-end gap-16">
             <div className="flex flex-col gap-3">

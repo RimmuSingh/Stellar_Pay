@@ -20,7 +20,7 @@ export default function PricingPage() {
             Zero hidden fees. <br /> Transparent by design.
           </h1>
           <p className="font-ui-label text-xl text-ink-secondary max-w-2xl mx-auto leading-relaxed">
-            Steller_pay is free for workers. Clients pay a flat 1% smart contract fee on project completion to cover network and protocol costs.
+            Stellar_pay is free for workers. Clients pay a flat 1% smart contract fee on project completion to cover network and protocol costs.
           </p>
         </Reveal>
 

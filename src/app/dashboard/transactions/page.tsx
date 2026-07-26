@@ -131,7 +131,7 @@ export default function TransactionsPage() {
         const projectId = scValToNative(args[0] as xdr.ScVal) as string;
         const contract = contracts.find(c => c.id === projectId);
         
-        const contractTitle = contract?.title || "Steller_pay Project";
+        const contractTitle = contract?.title || "Stellar_pay Project";
         const jobTitle = contract?.title || "Milestone Agreement";
         
         let type: TransactionDetails['type'] = 'Soroban Invocation';
@@ -374,7 +374,7 @@ export default function TransactionsPage() {
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
-    link.download = `Steller_pay_statement_${new Date().toISOString().split("T")[0]}.csv`;
+    link.download = `Stellar_pay_statement_${new Date().toISOString().split("T")[0]}.csv`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -579,7 +579,7 @@ export default function TransactionsPage() {
                         </div>
                         <h3 className="text-lg font-ui-label font-bold text-ink-primary mb-2">No Transactions Found</h3>
                         <p className="text-xs font-ui-label text-ink-secondary leading-normal">
-                          Your escrow and payment history will appear here once you start using Steller_pay.
+                          Your escrow and payment history will appear here once you start using Stellar_pay.
                         </p>
                       </div>
                     </td>

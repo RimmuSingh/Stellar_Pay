@@ -19,7 +19,7 @@ export default function FeaturesPage() {
             Programmable Escrow & Verified Milestones
           </h1>
           <p className="font-ui-label text-xl text-ink-secondary mb-16 leading-relaxed max-w-2xl">
-            Steller_pay replaces trust with cryptography. By locking funds in a Soroban smart contract, we eliminate counterparty risk for both the freelancer and the client.
+            Stellar_pay replaces trust with cryptography. By locking funds in a Soroban smart contract, we eliminate counterparty risk for both the freelancer and the client.
           </p>
         </Reveal>
 

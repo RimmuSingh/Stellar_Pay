@@ -25,7 +25,7 @@ export default function NetworkPage() {
             Engineered for global finance.
           </h1>
           <p className="font-ui-label text-xl text-ink-secondary mb-16 leading-relaxed max-w-2xl">
-            We built Steller_pay on the Stellar network because it was designed specifically for cross-border payments, high throughput, and rock-bottom fees.
+            We built Stellar_pay on the Stellar network because it was designed specifically for cross-border payments, high throughput, and rock-bottom fees.
           </p>
         </Reveal>
 

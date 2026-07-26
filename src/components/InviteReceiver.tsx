@@ -65,7 +65,7 @@ function InviteReceiverContent() {
 
             <div className="space-y-6">
               <p className="text-sm font-ui-label text-ink-secondary leading-relaxed">
-                You have received an invite to participate in a Steller_pay contract. The contract will hold and release funds securely through a multi-sig escrow system.
+                You have received an invite to participate in a Stellar_pay contract. The contract will hold and release funds securely through a multi-sig escrow system.
               </p>
 
               <div className="p-4 bg-bg-interactive rounded-2xl space-y-3.5 border border-edge-neutral">

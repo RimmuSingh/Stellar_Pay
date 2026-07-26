@@ -18,14 +18,14 @@ export function Logo({
     <div className="flex items-center gap-2">
       <Image 
         src="/logo.svg" 
-        alt="Steller_pay Logo" 
+        alt="Stellar_pay Logo" 
         width={iconSize} 
         height={iconSize} 
         className="object-contain shrink-0"
       />
       <div className={`min-w-0 flex flex-col justify-center ${hideTextOnMobile ? 'hidden sm:flex' : 'flex'}`}>
         <span className={`${textSize} font-headline-lg text-primary leading-none truncate block`}>
-          Steller_pay
+          Stellar_pay
         </span>
         <span className={`text-on-surface-variant font-ui-label ${subTextSize} uppercase tracking-wider truncate block mt-0.5`}>
           Infrastructure
