@@ -15,9 +15,6 @@
 ---
 <img width="1900" height="907" alt="image" src="https://github.com/user-attachments/assets/e6b7e07c-06b3-4096-84bc-a3065fbdba12" />
 
-<div align="center">
-
-
 ## 🌟 What is Stellar Pay?
 
 **Stellar Pay** is a decentralized freelance marketplace built on the **Stellar Network** using **Soroban Smart Contracts**. It combines the best of:
@@ -102,12 +99,14 @@ Milestone-based escrow smart contract for Soroban (Stellar), tested end-to-end o
 
 ## 🔁 CI/CD
 
-<img width="2553" height="1058" alt="Screenshot 2026-07-20 101646" src="https://github.com/user-attachments/assets/369dc209-7347-4023-851c-f632671dc9fb" />
+<img width="1902" height="911" alt="image" src="https://github.com/user-attachments/assets/e0083c2b-1fc7-4e37-b0e1-cf42fceeede8" />
+
 
 ## 📱 Mobile Responsive UI
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/b967e2c7-e7a0-4f57-bdf4-207bce46317a" alt="Stellar Pay Mobile UI" width="260">
+  <img width="482" height="792" alt="image" src="https://github.com/user-attachments/assets/5286e6dd-79e3-476b-af62-f51624fd081a" />
+
 </p>
 
 ## 📦 Smart Contract Folder Structure
