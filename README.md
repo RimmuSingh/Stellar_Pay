@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🤝 Stellar Pay
+#  Stellar Pay 🚀
 ### Programmable Trust for Global Freelancing
 *A decentralized freelance marketplace on Stellar Soroban — milestone-based escrow, wallet-native identity, zero middlemen.*
 
