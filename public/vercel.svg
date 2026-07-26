@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <linearGradient id="glow-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+  <!-- Base Shield/Hexagon contour -->
+  <path d="M50 5 L90 25 V75 L50 95 L10 75 V25 Z" fill="url(#glow-grad)" opacity="0.15" />
+  <path d="M50 5 L90 25 V75 L50 95 L10 75 V25 Z" stroke="url(#logo-grad)" stroke-width="4" stroke-linejoin="round" />
+  <!-- Center T/Lance shape -->
+  <!-- Top bar of the T, styled as a horizontal wing/shield top -->
+  <path d="M30 30 H70" stroke="#10b981" stroke-width="6" stroke-linecap="round" />
+  <!-- The body/stem of the T, shaped as a vertical lance pointing down -->
+  <path d="M50 30 V65 L50 72 L45 68 L50 78 L55 68 L50 72" stroke="#10b981" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="#10b981" />
+  <!-- Glowing core circle -->
+  <circle cx="50" cy="50" r="4" fill="#ffffff" />
+</svg>
