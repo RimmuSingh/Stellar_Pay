@@ -412,29 +412,42 @@ Stellar Pay/
 ```
 
 ---
-
-
 ### Authentication Flow
 
-```
-Connect Freighter
-        ↓
-Wallet Address
-        ↓
-Check Firestore
-        ↓
-   Existing Profile?
-   ┌────────┴────────┐
-  YES                NO
-   │                  │
-Dashboard        Create Profile
-                       ↓
-                  Choose Role
-                       ↓
-                  Dashboard
+```mermaid
+flowchart TD
+    A(["User Lands on App"]) --> B["Click Connect Wallet"]
+    B --> C{"Freighter Extension Installed?"}
+    C -->|No| C1["Prompt: Install Freighter"]
+    C1 --> C2(["Redirect to Freighter Download"])
+    C -->|Yes| D["Request Connection via Freighter API"]
+    D --> E{"User Approves in Freighter Popup?"}
+    E -->|Rejected| E1["Show Connection Denied Toast"]
+    E1 --> B
+    E -->|Approved| F["Retrieve Public Key / Wallet Address"]
+    F --> G["Request Signed Message for Auth Challenge"]
+    G --> H{"Signature Valid?"}
+    H -->|No| H1["Reject Session and Show Error"]
+    H1 --> B
+    H -->|Yes| I["Session Token Issued: Wallet Address as UID"]
+    I --> J[("Query Firestore users collection by wallet address")]
+    J --> K{"Profile Document Exists?"}
+    K -->|Yes| L["Fetch Existing Profile: Name, Role, Preferences"]
+    L --> M["Hydrate App State / Context Provider"]
+    M --> N(["Route to Dashboard"])
+    K -->|No| O["Create New User Doc: wallet address, created at"]
+    O --> P["Show Role Selection Screen"]
+    P --> Q{"Role Chosen"}
+    Q -->|Buyer| Q1["Set role: buyer"]
+    Q -->|Seller| Q2["Set role: seller"]
+    Q -->|Other| Q3["Set role: custom"]
+    Q1 --> R["Write Profile to Firestore"]
+    Q2 --> R
+    Q3 --> R
+    R --> M
 ```
 
----
+
 
 ## 👤 User Roles
 
@@ -450,38 +463,6 @@ Only two roles exist.
 | View Contracts / Payments / Transactions | View Contracts / Transactions |
 | Analytics | Analytics |
 
----
-
-## 🧠 High-Level System Architecture
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│                      FRONTEND (Next.js)                      │
-│  ┌──────────┐  ┌───────────┐  ┌────────────┐  ┌───────────┐ │
-│  │ Dashboard│  │   Jobs    │  │ Contracts  │  │ Payments  │ │
-│  └──────────┘  └───────────┘  └────────────┘  └───────────┘ │
-│       │               │               │              │      │
-│  ┌────────────────────────────────────────────────────────┐ │
-│  │           Freighter Wallet (Auth + Signing)             │ │
-│  └────────────────────────────────────────────────────────┘ │
-└───────────┬───────────────────────────────┬──────────────────┘
-            │ metadata reads/writes         │ signed transactions
-            ▼                               ▼
-┌───────────────────────────┐   ┌─────────────────────────────────┐
-│   FIREBASE (off-chain)    │   │   STELLAR TESTNET (on-chain)     │
-│                            │   │                                   │
-│  Firestore Collections:    │   │  ┌─────────────────────────────┐ │
-│  • profiles                │   │  │      Escrow Contract         │ │
-│  • jobs                    │   │  │  deposit · release · refund  │ │
-│  • applications             │   │  │  milestone state · auth      │ │
-│  • contracts (metadata)     │   │  └───────────────┬───────────────┘ │
-│  • transactions (index)     │   │                  │ token transfer   │
-│  • notifications            │   │                  ▼                 │
-│  • analytics                │   │        ┌───────────────────┐       │
-│  • activity                 │   │        │  USDC SEP-41 SAC   │       │
-│  • settings                 │   │        └───────────────────┘       │
-└───────────────────────────┘   └─────────────────────────────────┘
-```
 
 ### Division of Responsibility
 
