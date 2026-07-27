@@ -449,6 +449,41 @@ flowchart TD
 
 
 
+---
+## 🧠 High-Level System Architecture
+
+```mermaid
+flowchart TD
+    subgraph FE["FRONTEND (Next.js)"]
+        direction TB
+        subgraph Pages[" "]
+            direction LR
+            P1["Dashboard"]
+            P2["Jobs"]
+            P3["Contracts"]
+            P4["Payments"]
+        end
+        FW["Freighter Wallet (Auth + Signing)"]
+        Pages --> FW
+    end
+
+    subgraph FB["FIREBASE (off-chain)"]
+        direction TB
+        FBC["Firestore Collections:<br/>profiles, jobs, applications,<br/>contracts (metadata), transactions (index),<br/>notifications, analytics, activity, settings"]
+    end
+
+    subgraph ST["STELLAR TESTNET (on-chain)"]
+        direction TB
+        EC["Escrow Contract<br/>deposit · release · refund<br/>milestone state · auth"]
+        SAC["USDC SEP-41 SAC"]
+        EC -->|"token transfer"| SAC
+    end
+
+    FW -->|"metadata reads/writes"| FB
+    FW -->|"signed transactions"| ST
+```
+
+
 ## 👤 User Roles
 
 Only two roles exist.
